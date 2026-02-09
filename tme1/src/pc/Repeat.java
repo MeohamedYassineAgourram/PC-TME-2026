@@ -12,32 +12,43 @@ public class Repeat {
 
 	// Using "new StringBuilder()"
 	public static String repeatDefault(char c, int n) {
-		return null;
+		StringBuilder sb = new StringBuilder();
+		for (int i =0; i < n; i++) {
+			sb.append(c);
+		}
+		return sb.toString();
 	}
 	
 	// Using "new StringBuilder(n)"
 	public static String repeatCapacity(char c, int n) {
-		return null;
+		StringBuilder sb = new StringBuilder(n);
+		for (int i =0; i < n; i++) {
+			sb.append(c);
+		}
+		return sb.toString();
 	}
 	
 	public static void main(String [] args) {
+		int N = 100000;
+		System.out.println("Test avec N = " + N);
+
 		{
 		long time = System.currentTimeMillis();
-		String rep = Repeat.repeatNaive('a', 100000);		
+		String rep = Repeat.repeatNaive('a', N);		
 		long elapsed = System.currentTimeMillis() - time;
 		System.out.println("Naive Elapsed time: " + elapsed + "ms");
 		}
 		
 		{
 		long time = System.currentTimeMillis();
-		String rep = Repeat.repeatDefault('a', 100000);		
+		String rep = Repeat.repeatDefault('a', N);		
 		long elapsed = System.currentTimeMillis() - time;
 		System.out.println("Default Elapsed time: " + elapsed + "ms");
 		}
 
 		{
 		long time = System.currentTimeMillis();
-		String rep = Repeat.repeatCapacity('a', 100000);		
+		String rep = Repeat.repeatCapacity('a', N);		
 		long elapsed = System.currentTimeMillis() - time;
 		System.out.println("Capacity Elapsed time: " + elapsed + "ms");
 		}
