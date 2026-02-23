@@ -20,6 +20,7 @@ public class LifeGame {
 		LifeMode[] modes = new LifeMode[] { 
 				// Modes avec 1 updater pour 1 refresher
 				new NaiveMode(), // fourni, utilise sleep et aucune protection
+				new Mtsafemode(),
 				new LambdaMode(), // fourni, naive mais en lambda
 // TODO				new MtSafeMode(), // a partir de Naive, protéger LifeModel des data race.
 // TODO				new AlternateMode(), // a partir de MtSafe, forcer une alternance avec wait/notify
@@ -30,7 +31,7 @@ public class LifeGame {
 //TODO				new SemaphoreMode(), // avec N+1 sémaphores (un par updater, un pour le refresher)
 		};
 
-		String mode = "naive";
+		String mode = "mtsafe";
 		if (args.length > 0) {
 			mode = args[0];
 		}
