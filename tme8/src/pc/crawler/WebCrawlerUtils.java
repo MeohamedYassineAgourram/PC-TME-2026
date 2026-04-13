@@ -13,8 +13,8 @@ public class WebCrawlerUtils {
 
     	System.out.println("Processing URL: " + urlString);
     	
-        URL url = new URI(urlString).toURL();
-        URL base = new URI(baseUrl).toURL();
+        URL url = new URL(urlString);
+        URL base = new URL(baseUrl);
 
         List<String> nestedUrls = new ArrayList<>();
 
@@ -38,9 +38,7 @@ public class WebCrawlerUtils {
                     attrValue = attrValue.replaceAll("&amp;", "&");
                     
                     // Resolve the URL, keeping query parameters
-                    URI baseUri = url.toURI();
-                    URI resolvedUri = baseUri.resolve(attrValue);
-                    URL extractedUrl = resolvedUri.toURL();
+                    URL extractedUrl = new URL(url, attrValue);
                     String extractedUrlString = extractedUrl.toString();
 
                     // Only process URLs on the same domain
