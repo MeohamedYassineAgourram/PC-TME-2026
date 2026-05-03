@@ -22,15 +22,15 @@ public class LifeGame {
 				new NaiveMode(), // fourni, utilise sleep et aucune protection
 				new Mtsafemode(), // a partir de Naive, protéger LifeModel des data race.
 				new LambdaMode(), // fourni, naive mais en lambda 
-// TODO				new AlternateMode(), // a partir de MtSafe, forcer une alternance avec wait/notify
-// TODO				new ExternalMode(), // a partir de Naive, forcer une alternance avec une classe de synchro
+				new AlternateMode(), // a partir de MtSafe, forcer une alternance avec wait/notify
+				new ExternalMode(), // a partir de Naive, forcer une alternance avec une classe de synchro
 				// Modes avec plusieurs updater pour 1 refresher
 				new MultiMode(), // base avec N updater, sans protection
-//TODO				new TwoSemaphoreMode(), // avec 2 sémaphores (un pour les updaters, un pour le refresher)
-//TODO				new SemaphoreMode(), // avec N+1 sémaphores (un par updater, un pour le refresher)
+				new TwoSemaphoreMode(), // avec 2 sémaphores (un pour les updaters, un pour le refresher)
+				new SemaphoreMode(), // avec N+1 sémaphores (un par updater, un pour le refresher)
 		};
 
-		String mode = "naive";
+		String mode = "semaphore";
 		if (args.length > 0) {
 			mode = args[0];
 		}
