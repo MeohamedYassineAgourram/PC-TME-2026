@@ -1,0 +1,32 @@
+Résultats question 5
+
+Profondeur : 0 | Threads : 1 | Temps : 2.5811927 secondes
+Profondeur : 0 | Threads : 2 | Temps : 2.1975958 secondes
+Profondeur : 0 | Threads : 3 | Temps : 2.2732893 secondes
+Profondeur : 0 | Threads : 4 | Temps : 0.9127116 secondes
+Profondeur : 0 | Threads : 5 | Temps : 0.774616 secondes
+Profondeur : 0 | Threads : 6 | Temps : 0.6855305 secondes
+Profondeur : 1 | Threads : 1 | Temps : 4.2267685 secondes
+Profondeur : 1 | Threads : 2 | Temps : 3.2262157 secondes
+Profondeur : 1 | Threads : 3 | Temps : 4.0036365 secondes
+Profondeur : 1 | Threads : 4 | Temps : 3.0633751 secondes
+Profondeur : 1 | Threads : 5 | Temps : 3.6164347 secondes
+Profondeur : 1 | Threads : 6 | Temps : 2.0811053 secondes
+Profondeur : 2 | Threads : 1 | Temps : 22.4009072 secondes
+Profondeur : 2 | Threads : 2 | Temps : 15.9621372 secondes
+Profondeur : 2 | Threads : 3 | Temps : 11.1552986 secondes
+Profondeur : 2 | Threads : 4 | Temps : 9.3059293 secondes
+Profondeur : 2 | Threads : 5 | Temps : 11.4177483 secondes
+Profondeur : 2 | Threads : 6 | Temps : 8.091326 secondes
+Profondeur : 3 | Threads : 1 | Temps : 20.3066607 secondes
+Profondeur : 3 | Threads : 2 | Temps : 11.6721737 secondes
+Profondeur : 3 | Threads : 3 | Temps : 11.3448973 secondes
+Profondeur : 3 | Threads : 4 | Temps : 9.5620806 secondes
+Profondeur : 3 | Threads : 5 | Temps : 12.8296346 secondes
+Profondeur : 3 | Threads : 6 | Temps : 13.2506479 secondes
+Profondeur : 4 | Threads : 1 | Temps : 23.7738586 secondes
+Profondeur : 4 | Threads : 2 | Temps : 14.0586067 secondes
+Profondeur : 4 | Threads : 3 | Temps : 12.0163223 secondes
+Profondeur : 4 | Threads : 4 | Temps : 15.7734519 secondes
+Profondeur : 4 | Threads : 5 | Temps : 12.4433649 secondes
+Profondeur : 4 | Threads : 6 | Temps : 8.7541288 secondes
