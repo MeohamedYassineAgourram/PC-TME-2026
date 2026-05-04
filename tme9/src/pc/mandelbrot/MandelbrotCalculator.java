@@ -1,6 +1,7 @@
 package pc.mandelbrot;
 
 import java.awt.Color;
+import java.util.concurrent.ForkJoinPool;
 
 public class MandelbrotCalculator {
 	public static void compute(BoundingBox boundingBox, int maxIterations, int[] imageBuffer) {
@@ -21,7 +22,17 @@ public class MandelbrotCalculator {
 		long start = System.currentTimeMillis();
 		// TODO !!
 		// currently default to sequential
-		compute(boundingBox, maxIterations, imageBuffer);
+		int deb_x = 0;
+		int deb_y = 0;
+		int fin_x = boundingBox.width;
+		int fin_y = boundingBox.height;
+		
+		MandelbrotTask mandTask = new MandelbrotTask(boundingBox, maxIterations, imageBuffer, deb_x, deb_y, fin_x, fin_y);
+		//ForkJoinPool.commonPool().invoke(mandTask);
+		ForkJoinPool pool = new ForkJoinPool(8);
+		pool.invoke(mandTask);
+		pool.shutdown();
+		
 		System.out.println("Rendered image in " + (System.currentTimeMillis() - start) + " ms");
 	}
 

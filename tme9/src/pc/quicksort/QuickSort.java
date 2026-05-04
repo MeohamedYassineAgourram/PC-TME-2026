@@ -2,7 +2,9 @@ package pc.quicksort;
 
 import java.util.Random;
 
+
 public class QuickSort {
+	//fonction qui coupe le tableau en 2 paries autour d'un pivot, le nombre d'élément à gauche correspond au nombre d'élément inférrieur par rapport à notre pivot et inversement pour la droite
 	public static int partition(int[] array, int low, int high) {
 		int pivot = array[low];
 		int i = low - 1;
@@ -45,4 +47,5 @@ public class QuickSort {
 		}
 		return result;
 	}
+	
 }
